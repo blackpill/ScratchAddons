@@ -1,86 +1,30 @@
 <img src="https://raw.githubusercontent.com/ScratchAddons/ScratchAddons/master/images/icon.svg" alt="Scratch Addons logo" align="right" width="128px"></img>
-# Welcome to Scratch Addons' repository!
+# 欢迎使用Scratch Addons本地服务器版（更适合无法访问Scratch官网的中国大陆用户）
 
-[![](https://img.shields.io/github/stars/ScratchAddons/ScratchAddons?color=blue&style=flat-square)](https://github.com/ScratchAddons/ScratchAddons/stargazers) 
-[![](https://img.shields.io/github/forks/ScratchAddons/ScratchAddons?color=blue&style=flat-square)](https://github.com/ScratchAddons/ScratchAddons/network/members)
-[![](https://img.shields.io/github/watchers/ScratchAddons/ScratchAddons?color=blue&style=flat-square)](https://github.com/ScratchAddons/ScratchAddons/watchers) 
-[![](https://img.shields.io/github/issues/ScratchAddons/ScratchAddons?color=green&style=flat-square)](https://github.com/ScratchAddons/ScratchAddons/issues) 
-[![](https://img.shields.io/github/issues-pr/ScratchAddons/ScratchAddons?color=green&style=flat-square)](https://github.com/ScratchAddons/ScratchAddons/pulls) 
-[![](https://img.shields.io/github/license/ScratchAddons/ScratchAddons?style=flat-square)](https://github.com/ScratchAddons/ScratchAddons/blob/master/LICENSE) <!-- 2 spaces -->  
-[![](https://img.shields.io/chrome-web-store/v/fbeffbjdlemaoicjdapfpikkikjoneco?style=flat-square&logo=google-chrome&logoColor=white&label=version&color=4285F4)](https://chrome.google.com/webstore/detail/fbeffbjdlemaoicjdapfpikkikjoneco)
-[![](https://img.shields.io/chrome-web-store/users/fbeffbjdlemaoicjdapfpikkikjoneco?style=flat-square&logo=google-chrome&logoColor=white&label=users&color=4285F4)](https://chrome.google.com/webstore/detail/fbeffbjdlemaoicjdapfpikkikjoneco)
-[![](https://img.shields.io/amo/v/scratch-messaging-extension?style=flat-square&logo=firefox-browser&logoColor=white&label=version&color=FF7139)](https://addons.mozilla.org/firefox/addon/scratch-messaging-extension/)
-[![](https://img.shields.io/amo/users/scratch-messaging-extension?style=flat-square&logo=firefox-browser&logoColor=white&label=users&color=FF7139)](https://addons.mozilla.org/firefox/addon/scratch-messaging-extension/)
-[![](https://img.shields.io/github/v/release/ScratchAddons/ScratchAddons?style=flat-square&logo=github&logoColor=white&label=version&color=181717)](https://github.com/ScratchAddons/ScratchAddons/releases)
-[![](https://img.shields.io/github/downloads/ScratchAddons/ScratchAddons/total?style=flat-square&logo=github&logoColor=white&label=downloads&color=181717)](https://github.com/ScratchAddons/ScratchAddons/releases)
-[![](https://img.shields.io/badge/discuss-on_github-181717.svg?style=flat-square)](https://github.com/ScratchAddons/ScratchAddons/discussions)
-[![](https://img.shields.io/badge/chat-on_discord-7289da.svg?style=flat-square)](https://discord.gg/R5NBqwMjNc)
-[![](https://img.shields.io/badge/website-scratchaddons.com-ff7b26.svg?style=flat-square)](https://scratchaddons.com)
+## 关于本项目
 
-## About
+Scratch Addons 是一个包含丰富功能的浏览器扩展，目前包含了上百个插件，但标准版本仅适用于Scratch官方网站。但受限于网络条件，一部分用户无法访问Scratch官网（比如中国大陆用户），或者访问速度很慢。
+为了方便这些用户使用Scratch Addons里的部分功能（比如调试器，视频录制），本项目对标准版本进行了针对性的修改，使浏览器插件能支持本地的scratch-gui服务。
 
-Scratch Addons is a WebExtension (supports both Chrome and Firefox). Scratch Addons' mission is to combine all existing Scratch extensions, userscripts and userstyles into a single easy-to-access place, while still letting users choose which ones to enable.
+## 安装方法
 
-### What's actually an "addon"?
-
-An addon is similar to an extension or a userscript, but they use special APIs provided by the Scratch Addons extension. These APIs allow addons to run scripts on a Scratch page (userscripts), run scripts on the background (persistent scripts), or apply styles to the Scratch website (userstyles).
-
-Userscripts and persistent scripts can use the `addon.*` JavaScript APIs, which allow them to obtain Scratch-related information (for example, get the current logged in user) and also use extension APIs (like sending notifications).
-
-Converting an already existing extension/userscript into an addon, or writing your own, is very easy. [Check out the guide](https://scratchaddons.com/docs/develop/getting-started/creating-an-addon/).
-
-### If everything is an addon, then what does Scratch Addons do?
-
-Scratch Addons by itself is just an addon loader. Its main tasks are:
-
-- Allow users to enable, disable and configure addons.
-- Run addons and provide APIs to them.
-- Provide global state to addons (for example, the `addon.auth` API).
-- Pollute prototypes for use by addon userscripts.
-- Provide ways to access and modify Redux state.
-- Avoid addons from interfering with each other.
-- Avoid duplicate work from different addons.
-
-### Addons outside of Scratch Addons itself
-
-Other extensions (and even forks of Scratch) can also provide their users with most addons from Scratch Addons, as long as a compatibility layer for `addon.*` and other parts of the addon loader is present. Notable examples are the [Scratch 3 Developer Tools extension](https://github.com/ScratchAddons/DevtoolsExtension) and the [TurboWarp](https://github.com/TurboWarp/scratch-gui/tree/develop/src/addons) editor. These also inherit translations from the Scratch Addons project.
-
-## Install
-
-### From extension stores
-
-[![](https://img.shields.io/chrome-web-store/v/fbeffbjdlemaoicjdapfpikkikjoneco?style=flat-square&logo=google-chrome&logoColor=white&label=install&color=4285F4)](https://chrome.google.com/webstore/detail/fbeffbjdlemaoicjdapfpikkikjoneco)  
-&nbsp;&nbsp;&nbsp;&nbsp;↳ Install on Google Chrome, Opera, Brave, Vivaldi, Microsoft Edge (>79), and other Chromium-based browsers.
-
-[![](https://img.shields.io/amo/v/scratch-messaging-extension?style=flat-square&logo=firefox-browser&logoColor=white&label=install&color=FF7139)](https://addons.mozilla.org/firefox/addon/scratch-messaging-extension/)  
-&nbsp;&nbsp;&nbsp;&nbsp;↳ Install on Mozilla Firefox.
-
-### From source
-
-No build is required. You may download the source code by doing one of these steps.
-
-1. Cloning the repository by running `git clone https://github.com/ScratchAddons/ScratchAddons.git`.
-2. Download the zipball of the current state of the repository [here](https://github.com/ScratchAddons/ScratchAddons/archive/master.zip).
-3. Download one of the builds on [the releases page](https://github.com/ScratchAddons/ScratchAddons/releases). (.zip recommended)
-
-After downloading the extension to your computer, just load it by following these steps.
+1. 克隆本项目： `git clone git@github.com:blackpill/ScratchAddons.git`.
+2. 运行scratch-gui：
+```bash
+git clone https://github.com/LLK/scratch-gui.git
+cd scratch-gui
+npm install
+npm start
+```
+3. 确认scratch-gui的服务器地址是：http://localhost:8601/
+4. 克隆完成之后，在浏览器中加载本插件
 
 - Google Chrome
-  1. Open `chrome://extensions` to open the Extension Management page by typing it into your address bar.
-  2. Enable Developer Mode by clicking the toggle switch next to Developer mode.
-  3. Click the `Load unpacked` button on the top and select the extension directory which has the `manifest.json` file in it. 
+  1. 在地址栏输入 `chrome://extensions` 打开扩展管理.
+  2. 启用开发者模式.
+  3. 点击`加载已解压的扩展程序`，选择有`manifest.json`本项目代码目录.
 
 - Mozilla Firefox
-  1. Open `about:debugging` to open the debugging page by typing it into your address bar.
-  2. Click `This Firefox` on the left-hand menu.
-  3. Click `Load Temporary Add-on...` and select the `manifest.json` file.
-
-## Contribute
-
-If you found a bug, or want to suggest new features, please use the [issues tab](https://github.com/ScratchAddons/ScratchAddons/issues). If you want to help with the code or add a new addon, fork this repository, and then create a [pull request](https://github.com/ScratchAddons/ScratchAddons/pulls). Also, please read our [contributing guidelines](https://github.com/ScratchAddons/ScratchAddons/blob/master/CONTRIBUTING.md).
-
-## License
-
-Scratch Addons is licensed under the terms of the [GNU General Public License v3.0](https://github.com/ScratchAddons/ScratchAddons/blob/master/LICENSE).
-
-Other third-party libraries used are listed on [/libraries/README.md](https://github.com/ScratchAddons/ScratchAddons/tree/master/libraries#readme).
+  1. 在地址栏输入 `about:debugging`.
+  2. 点击左侧菜单的`此Firefox`.
+  3. 点击`临时载入附加组件...`，并选择本项目代码目录里的`manifest.json`文件.
